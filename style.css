@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
+.inter-normal {font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular {font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular-italic {font-family: "Poppinsitalic", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-regular {font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular-italic {font-family: "Latoitalic", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+      body{
+          --backgournd: #181C14;
+          --back: linear-gradient(to right, #181C14, #3C3D37);
+          --text: #ECDFCC;
+          --widgets: #697565;
+          --main: #3C3D37;
+          --tasks: #697565;
+
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(50deg, #181C14, #3C3D37);
+        overflow: hidden;
+        display: flex;
+        gap: 1vw;
+      }
+    
+      header{
+       margin-top: 5px;
+       font-family: "Inter", serif;
+       font-size: 3em;
+       padding: 10px 0px;
+       width: 50vw;
+       height: fit-content;
+       border-radius: 1vw;
+       justify-content: center;
+       text-align: center;
+       background-color: var(--widgets);
+       color: var(--text);
+      }
+    
+      #main {
+        width: fit-content; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+        background-color: var(--main);
+        border-radius: 1vw;
+        box-shadow: 1vw 2vw 3vw;
+        padding: 1vw 2vw;
+        min-height: 40vh;
+        max-height: 90vh;
+    }
+
+    h2{
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+    ul{
+      background-color: var(--widgets);
+      border-radius: 1vw;
+      display:flex;
+      padding: 0.5vw 4vw;
+      margin: auto;
+      gap: 2%;
+      width: fit-content;
+      justify-content: center;
+      text-decoration: none;
+    }
