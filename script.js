@@ -41,7 +41,7 @@ function createTaskElement(task, taskdate) {
 
   const paragraph2 = document.createElement("p");
   paragraph2.id="date";
-  paragraph2.textContent = `(${formattedDate})`;
+  paragraph2.textContent = `${formattedDate}`;
   container.appendChild(paragraph2);
 
   const deleteButton = document.createElement("button");
