@@ -60,7 +60,9 @@ function createTaskElement(task, taskdate) {
 function saveTasks() {
   let taskList = [];
   tasks.querySelectorAll("li").forEach(function (item) {
-    taskList.push(item.firstChild.textContent.trim());
+    const taskText = item.querySelector("#name").textContent.trim();
+    const taskDate = item.querySelector("#date").textContent.trim().replace(/[()]/g, "");
+    taskList.push({ text: taskText, date: taskDate });
   });
 
   localStorage.setItem("tasks", JSON.stringify(taskList));
@@ -69,9 +71,8 @@ function saveTasks() {
 function loadTasks() {
   const taskList = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  taskList.forEach((taskText) => {
-    const [task, taskdate] = taskText.split(" (");
-    createTaskElement(task, taskdate?.replace(")", ""));
+  taskList.forEach((task) => {
+    createTaskElement(task.text, task.date);
   });
 }
 
