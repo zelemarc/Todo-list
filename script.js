@@ -26,8 +26,6 @@ addButton.addEventListener("click", addTask);
 function createTaskElement(task, taskdate) {
   const listItem = document.createElement("li");
   listItem.id = "task";
-
-  const formattedDate = formatDate(taskdate);
   
 
   const paragraph1 = document.createElement("p");
@@ -41,7 +39,7 @@ function createTaskElement(task, taskdate) {
 
   const paragraph2 = document.createElement("p");
   paragraph2.id="date";
-  paragraph2.textContent = `${formattedDate}`;
+  paragraph2.textContent = `${taskdate}`;
   container.appendChild(paragraph2);
 
   const deleteButton = document.createElement("button");
@@ -76,11 +74,3 @@ function loadTasks() {
   });
 }
 
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = date.getFullYear();
-
-  return `${day}.${month}.${year}`;
-}
